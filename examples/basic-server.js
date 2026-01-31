@@ -14,7 +14,7 @@
 
 const http = require('node:http');
 
-const handler = http.createServer((req, res) => {
+const handler = ((req, res) => {
     console.log('Request received');
 
     let data = "";
@@ -33,3 +33,4 @@ const server = http.createServer(handler);
 server.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
+
